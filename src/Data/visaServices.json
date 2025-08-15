@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Tourist Visa (USA)",
+    "description": "Short-term visit to the United States for tourism and leisure.",
+    "type": "Tourist",
+    "processingTime": "7-10 days"
+  },
+  {
+    "id": 2,
+    "name": "Business Visa (USA)",
+    "description": "Business related meetings or events in the United States.",
+    "type": "Business",
+    "processingTime": "5-8 days"
+  },
+  {
+    "id": 3,
+    "name": "Student Visa (USA)",
+    "description": "Visa for international students enrolled in US colleges/universities.",
+    "type": "Student",
+    "processingTime": "15-20 days"
+  },
+  {
+    "id": 4,
+    "name": "Tourist Visa (Canada)",
+    "description": "Short-term tourism or visit in Canada.",
+    "type": "Tourist",
+    "processingTime": "8-12 days"
+  },
+  {
+    "id": 5,
+    "name": "Business Visa (Canada)",
+    "description": "Meetings, conferences or trade purposes in Canada.",
+    "type": "Business",
+    "processingTime": "6-9 days"
+  },
+  {
+    "id": 6,
+    "name": "Study Permit (Canada)",
+    "description": "Permit for full time international students in Canada.",
+    "type": "Student",
+    "processingTime": "18-22 days"
+  },
+  {
+    "id": 7,
+    "name": "Tourist Visa (UK)",
+    "description": "Tourist or family visit to the United Kingdom.",
+    "type": "Tourist",
+    "processingTime": "10-14 days"
+  },
+  {
+    "id": 8,
+    "name": "Business Visa (UK)",
+    "description": "Business visit to the United Kingdom.",
+    "type": "Business",
+    "processingTime": "6-10 days"
+  },
+  {
+    "id": 9,
+    "name": "Student Visa (UK)",
+    "description": "Long-term student visa for higher studies in the UK.",
+    "type": "Student",
+    "processingTime": "15-20 days"
+  },
+  {
+    "id": 10,
+    "name": "Tourist Visa (Australia)",
+    "description": "Short-term tourism and holidays in Australia.",
+    "type": "Tourist",
+    "processingTime": "9-12 days"
+  },
+  {
+    "id": 11,
+    "name": "Business Visa (Australia)",
+    "description": "Business visit for meetings, training and conferences in Australia.",
+    "type": "Business",
+    "processingTime": "6-9 days"
+  },
+  {
+    "id": 12,
+    "name": "Student Visa (Australia)",
+    "description": "Visa for full-time course in Australian institutions.",
+    "type": "Student",
+    "processingTime": "16-25 days"
+  },
+  {
+    "id": 13,
+    "name": "Tourist Visa (Japan)",
+    "description": "Short-term sightseeing trips to Japan.",
+    "type": "Tourist",
+    "processingTime": "6-10 days"
+  },
+  {
+    "id": 14,
+    "name": "Business Visa (Japan)",
+    "description": "Business-related visits such as meetings and negotiations in Japan.",
+    "type": "Business",
+    "processingTime": "5-8 days"
+  },
+  {
+    "id": 15,
+    "name": "Student Visa (Japan)",
+    "description": "Long-term stay for educational purposes in Japan.",
+    "type": "Student",
+    "processingTime": "20-30 days"
+  },
+  {
+    "id": 16,
+    "name": "Tourist Visa (Germany)",
+    "description": "Short-term stay in Germany for travel or family visit.",
+    "type": "Tourist",
+    "processingTime": "8-12 days"
+  },
+  {
+    "id": 17,
+    "name": "Business Visa (Germany)",
+    "description": "Business-related travel such as meetings, trade fairs etc.",
+    "type": "Business",
+    "processingTime": "6-10 days"
+  },
+  {
+    "id": 18,
+    "name": "Student Visa (Germany)",
+    "description": "Long-term stay in Germany to pursue academic programs.",
+    "type": "Student",
+    "processingTime": "15-25 days"
+  },
+  {
+    "id": 19,
+    "name": "Tourist Visa (Singapore)",
+    "description": "Short visit to Singapore for tourism.",
+    "type": "Tourist",
+    "processingTime": "5-7 days"
+  },
+  {
+    "id": 20,
+    "name": "Business Visa (Singapore)",
+    "description": "Attending meetings, conferences or corporate events in Singapore.",
+    "type": "Business",
+    "processingTime": "4-6 days"
+  }
+]

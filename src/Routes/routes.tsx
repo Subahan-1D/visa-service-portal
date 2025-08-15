@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router";
 import ErrorPage from "../Pages/ErrorPage";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home";
+import VisaServices from "../Pages/visaServices";
 
 
 export const routers = createBrowserRouter([
@@ -18,6 +19,10 @@ export const routers = createBrowserRouter([
                 path: "/",
                 element: <Home></Home>
             },
+            {
+                path : "/service",
+                element : <VisaServices></VisaServices>
+            }
           
         ]
     }
