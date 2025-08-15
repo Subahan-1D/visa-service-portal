@@ -1,69 +1,45 @@
-# React + TypeScript + Vite
+# Visa Service Portal (Mini Web App)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small, modern, and responsive web application where users can explore different visa services, view step-by-step process information, and track their own application progress.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Tech Stack
 
-## Expanding the ESLint configuration
+| Technology       | Description                                       |
+|------------------|--------------------------------------------------|
+| **React**        | Front-end library                                 |
+| **TypeScript**   | Static type safety for React                     |
+| **TailwindCSS**  | Utility-first CSS styling                         |
+| **shadcn/ui**    | UI component library used on top of TailwindCSS  |
+| **React Hook Form** | Form handling / validation                     |
+| **React Router** | Page navigation                                   |
+| **LocalStorage** | Store application progress locally               |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✅ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Responsive **Home**, **Visa Services**, and **My Application** pages.
+- Dynamic list of visa services loaded via JSON (mock API).
+- Search and filter functionality.
+- Clean and modern design using TailwindCSS + shadcn.
+- Complete mobile/desktop responsive navigation with dark mode toggle.
+- Application form with React Hook Form validation.
+- Track application **progress** and save progress in `localStorage`.
+- (Bonus) Progress indicator based on completed steps.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Folder Structure (Main)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repo
+
+```bash
+git clone https://github.com/Subahan-1D/visa-service-portal.git
+cd visa-service-portal
