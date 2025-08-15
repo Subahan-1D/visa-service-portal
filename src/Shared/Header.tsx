@@ -77,7 +77,7 @@ const Header = () => {
       <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between w-full md:w-auto">
           <a>
-            <img className="w-20" src={visaLogo} alt="Logo" />
+            <img className="w-20 rounded-2xl"  src={visaLogo} alt="Logo" />
             <Link to="/" className=" font-bold text-blue-700 dark:text-white">
               Visa Service Portal
             </Link>
