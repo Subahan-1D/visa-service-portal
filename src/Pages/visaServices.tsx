@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, Select, Input, Divider, Pagination, Progress } from "antd";
-import visaData from "../data/visaServices.json";
+import visaData from "../../public/data/visaServices.json";
 import Banner from "./Banner";
 
 const { Option } = Select;
@@ -33,7 +33,9 @@ const VisaServices = () => {
       }
 
       if (filterType !== "All") {
-        filtered = filtered.filter((service: VisaService) => service.type === filterType);
+        filtered = filtered.filter(
+          (service: VisaService) => service.type === filterType
+        );
       }
 
       setServices(filtered);
@@ -45,7 +47,10 @@ const VisaServices = () => {
   }, [searchText, filterType]);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const paginatedServices = services.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const paginatedServices = services.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
   return (
     <div>
@@ -56,7 +61,7 @@ const VisaServices = () => {
           percent={50}
           status="active"
           showInfo={false}
-          strokeColor={{ '0%': '#3b82f6', '100%': '#60a5fa' }}
+          strokeColor={{ "0%": "#3b82f6", "100%": "#60a5fa" }}
           className="fixed top-0 left-0 w-full z-50"
         />
       )}
@@ -98,11 +103,17 @@ const VisaServices = () => {
               {paginatedServices.map((service: VisaService) => (
                 <Card
                   key={service.id}
-                  title={<span className="text-lg font-semibold">{service.name}</span>}
+                  title={
+                    <span className="text-lg font-semibold">
+                      {service.name}
+                    </span>
+                  }
                   hoverable
                   className="shadow-lg rounded-xl transition-transform transform hover:-translate-y-1 hover:shadow-2xl"
                 >
-                  <p className="text-gray-600 dark:text-gray-300 mb-3">{service.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-3">
+                    {service.description}
+                  </p>
                   <p className="font-medium text-blue-600 dark:text-blue-400">
                     Estimated Time: {service.processingTime}
                   </p>
@@ -132,7 +143,10 @@ const VisaServices = () => {
                 if (type === "next") {
                   return (
                     <button
-                      disabled={currentPage === Math.ceil(services.length / ITEMS_PER_PAGE)}
+                      disabled={
+                        currentPage ===
+                        Math.ceil(services.length / ITEMS_PER_PAGE)
+                      }
                       className="px-4 py-2 bg-blue-600 text-white rounded-md font-medium shadow hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition"
                     >
                       Next

@@ -5,7 +5,7 @@ import Footer from "../Shared/Footer";
 
 const Main = () => {
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1240px] mx-auto">
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Header />
         <div className="flex min-h-screen">

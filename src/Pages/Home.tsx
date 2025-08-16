@@ -2,7 +2,7 @@ import Banner from "./Banner";
 
 const Home = () => {
   return (
-    <div className="w-full mx-auto ">
+    <div className="w-full mx-auto">
       <Banner title="Welcome to Visa Serivice Portal"></Banner>
     </div>
   );
