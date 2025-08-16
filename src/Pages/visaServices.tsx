@@ -6,8 +6,16 @@ import Banner from "./Banner";
 const { Option } = Select;
 const ITEMS_PER_PAGE = 8;
 
+interface VisaService {
+  id: number;
+  name: string;
+  description: string;
+  type: string;
+  processingTime: string;
+}
+
 const VisaServices = () => {
-  const [services, setServices] = useState(visaData);
+  const [services, setServices] = useState<VisaService[]>(visaData);
   const [searchText, setSearchText] = useState("");
   const [filterType, setFilterType] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,31 +24,28 @@ const VisaServices = () => {
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => {
-      let filtered = visaData;
+      let filtered: VisaService[] = visaData;
 
       if (searchText !== "") {
-        filtered = filtered.filter((service) =>
+        filtered = filtered.filter((service: VisaService) =>
           service.name.toLowerCase().includes(searchText.toLowerCase())
         );
       }
 
       if (filterType !== "All") {
-        filtered = filtered.filter((service) => service.type === filterType);
+        filtered = filtered.filter((service: VisaService) => service.type === filterType);
       }
 
       setServices(filtered);
       setCurrentPage(1);
       setLoading(false);
-    }, 500); // simulate network delay
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [searchText, filterType]);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const paginatedServices = services.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE
-  );
+  const paginatedServices = services.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
     <div>
@@ -90,16 +95,14 @@ const VisaServices = () => {
         {!loading && paginatedServices.length > 0 && (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-              {paginatedServices.map((service) => (
+              {paginatedServices.map((service: VisaService) => (
                 <Card
                   key={service.id}
                   title={<span className="text-lg font-semibold">{service.name}</span>}
                   hoverable
                   className="shadow-lg rounded-xl transition-transform transform hover:-translate-y-1 hover:shadow-2xl"
                 >
-                  <p className="text-gray-600 dark:text-gray-300 mb-3">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-3">{service.description}</p>
                   <p className="font-medium text-blue-600 dark:text-blue-400">
                     Estimated Time: {service.processingTime}
                   </p>
@@ -115,7 +118,7 @@ const VisaServices = () => {
               className="flex justify-center gap-4"
               showSizeChanger={false}
               showPrevNextJumpers={false}
-              itemRender={(page, type, originalElement) => {
+              itemRender={(_page, type, originalElement) => {
                 if (type === "prev") {
                   return (
                     <button
