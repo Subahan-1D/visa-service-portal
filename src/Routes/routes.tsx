@@ -1,31 +1,28 @@
-
-
-
-
 import { createBrowserRouter } from "react-router";
 import ErrorPage from "../Pages/ErrorPage";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home";
 import VisaServices from "../Pages/VisaServices";
-
+import Applicaton from "../Pages/Application";
 
 export const routers = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
         path: "/",
-        element: <Main></Main>,
-        errorElement: <ErrorPage></ErrorPage>,
-        children: [
-            {
-                path: "/",
-                element: <Home></Home>
-            },
-            {
-                path : "/service",
-                element : <VisaServices></VisaServices>
-            }
-          
-        ]
-    }
-
-
+        element: <Home></Home>,
+      },
+      {
+        path: "/service",
+        element: <VisaServices></VisaServices>,
+      },
+      {
+        path: "/application",
+        element: <Applicaton></Applicaton>,
+      },
+    ],
+  },
 ]);
